@@ -119,7 +119,7 @@ export default {
       description: 'An episode note. Where encoded is a string containing information about your episode.',
       type: 'array',
       of: [{
-        type: 'block'
+        type: 'block',
       },
       {
         type: 'reference',
