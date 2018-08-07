@@ -1,0 +1,12 @@
+.logo {
+    width: auto;
+    height: 2em;
+}
+
+@media (min-width: 32em) {
+    .logo {
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+}
