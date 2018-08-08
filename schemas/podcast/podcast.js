@@ -148,6 +148,15 @@ export default {
           }))
         }
       ]
+    },
+    {
+      name: 'hosts',
+      type: 'array',
+      title: 'Hosts',
+      of: [
+        {type: 'reference', to: [{type: 'host'}]}
+      ],
+      validation: Rule => Rule.unique().error('Only one of each host.')
     }
   ],
   preview: {
