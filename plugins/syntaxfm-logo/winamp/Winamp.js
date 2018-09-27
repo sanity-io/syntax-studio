@@ -29,12 +29,7 @@ export default class Winamp extends Component {
                 title
               },
               url: file.asset.url
-            })),
-          // Optional. The default skin is included in the js bundle, and will be loaded by default.
-          initialSkin: {
-            // Can be downloaded from https://github.com/captbaritone/webamp/raw/master/skins/TopazAmp1-2.wsz
-            url: "/static/base-2.91.wsz"
-          }
+            }))
         });
         // Render after the skin has loaded.
         webamp.renderWhenReady(document.getElementById("webamp-container"));
