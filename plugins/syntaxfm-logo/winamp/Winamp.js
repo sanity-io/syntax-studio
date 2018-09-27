@@ -44,7 +44,6 @@ export default class Winamp extends Component {
     const webampFileInput = document.getElementById("webamp-file-input");
     ReactDOM.unmountComponentAtNode(webamp);
     ReactDOM.unmountComponentAtNode(webampFileInput);
-    webamp.remove();
     webampFileInput.remove();
   }
   render() {
