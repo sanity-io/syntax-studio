@@ -35,13 +35,14 @@ class Player extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.document._id !== prevProps.document._id) {
+    if (this.props.document._id !== prevProps.document._id && this.audio) {
       const lp = localStorage.getItem(`lastPlayed${this.props.document._id}`);
       if (lp) {
         const data = JSON.parse(lp);
         this.setState({
           currentTime: data.lastPlayed
         });
+
         this.audio.currentTime = data.lastPlayed;
       }
       this.audio.play();
